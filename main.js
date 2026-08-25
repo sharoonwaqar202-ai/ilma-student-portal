@@ -1,5 +1,12 @@
 import { createClient } from "@supabase/supabase-js";
 import "./style.css";
+let currentUser = null;
+
+async function checkLogin() {
+  const { data: { session } } = await supabase.auth.getSession();
+  currentUser = session?.user ?? null;
+  return currentUser;
+}
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
