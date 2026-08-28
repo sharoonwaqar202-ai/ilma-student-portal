@@ -102,7 +102,12 @@ function renderDashboard(student, marks, attendance, fees) {
   dashboard.classList.remove("hidden");
   dashboard.innerHTML = `
     <div class="profile card">
-      <div class="avatar">${escapeHtml(student.full_name?.charAt(0) ?? "S")}</div>
+      <div class="avatar">
+  <img
+    src="https://mesdnfikjzxuhiuuagvz.supabase.co/storage/v1/object/sign/documents/Muhammad_Zunair_Profile.jpeg?token=eyJraWQiOiI4OTQ0ZGJmOC1lZTFjLTQ4MWUtYTE0Ni1lOWEzMmNmYWVkM2QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2N1bWVudHMvTXVoYW1tYWRfWnVuYWlyX1Byb2ZpbGUuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODc5MjkyNTYsImV4cCI6MTgxOTQ2NTI1Nn0.yFcslvsQ_dJ-j2JDS-36_p1fcKf3a5uNPeo2vPpa8LM"
+    alt="Muhammad Zunair"
+  />
+</div>
       <div class="profile-main">
         <span class="eyebrow">Student Profile</span>
         <h2>${escapeHtml(student.full_name)}</h2>
