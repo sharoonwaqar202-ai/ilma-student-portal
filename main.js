@@ -67,7 +67,7 @@ function percent(attended, held) {
 }
 
 function renderDashboard(student, marks, attendance, fees) {
-  const degreePath = "Muhammad_Zunair_Degree.pdf";
+  const degreePath = "https://mesdnfikjzxuhiuuagvz.supabase.co/storage/v1/object/sign/documents/Muhammad_Zunair_Degree.pdf?token=eyJraWQiOiI4OTQ0ZGJmOC1lZTFjLTQ4MWUtYTE0Ni1lOWEzMmNmYWVkM2QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2N1bWVudHMvTXVoYW1tYWRfWnVuYWlyX0RlZ3JlZS5wZGYiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg3OTI4NjEzLCJleHAiOjE4MTk0NjQ2MTN9.G6f5mIuZ5mP136OctR4Yhsa28-ihIRhnc9fuMuPOIJI";
 
   const grouped = new Map();
   
