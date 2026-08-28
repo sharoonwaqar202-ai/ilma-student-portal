@@ -71,7 +71,6 @@ function renderDashboard(student, marks, attendance, fees) {
 
   const grouped = new Map();
   
-  const grouped = new Map();
   marks.forEach(m => {
     grouped.set(m.subject_id, {
       subject: m.subjects?.subject_name ?? "Subject",
