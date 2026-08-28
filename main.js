@@ -67,6 +67,10 @@ function percent(attended, held) {
 }
 
 function renderDashboard(student, marks, attendance, fees) {
+  const degreePath = "Muhammad_Zunair_Degree.pdf";
+
+  const grouped = new Map();
+  
   const grouped = new Map();
   marks.forEach(m => {
     grouped.set(m.subject_id, {
@@ -116,7 +120,19 @@ function renderDashboard(student, marks, attendance, fees) {
       <div class="card info"><span>Phone</span><strong>${escapeHtml(student.phone ?? "—")}</strong></div>
       <div class="card info"><span>Email</span><strong>${escapeHtml(student.email ?? "—")}</strong></div>
       <div class="card info"><span>Fee Status</span><strong class="${fee?.status?.toLowerCase()==="paid" ? "paid":"pending"}">${escapeHtml(fee?.status ?? "—")}</strong></div>
-    </div>
+    </div> <div class="card section">
+  <div class="section-title">
+    <h3>Degree Certificate</h3>
+    <span>Official Document</span>
+  </div>
+
+  <div class="degree-box">
+    <p>Muhammad Zunair — Bachelor of Arts</p>
+    <a href="${degreePath}" target="_blank" download>
+      View / Download Degree
+    </a>
+  </div>
+</div>
 
     <div class="card section">
       <div class="section-title"><h3>Marksheet</h3><span>${marks.length} subjects</span></div>
