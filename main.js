@@ -13,6 +13,60 @@ const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 const supabase = (supabaseUrl && supabaseKey)
   ? createClient(supabaseUrl, supabaseKey)
   : null;
+function showLoginPage() {
+  document.querySelector("#app").innerHTML = `
+    <div class="login-page">
+      <div class="login-card">
+        <div class="logo">IL</div>
+        <h1>ILMA Student Portal</h1>
+        <p>Login to access your student record</p>
+
+        <form id="loginForm">
+          <input
+            id="loginEmail"
+            type="email"
+            placeholder="Email Address"
+            required
+          />
+
+          <input
+            id="loginPassword"
+            type="password"
+            placeholder="Password"
+            required
+          />
+
+          <button type="submit">Login</button>
+        </form>
+
+        <div id="loginMessage" class="message"></div>
+      </div>
+    </div>
+  `;
+
+  document.querySelector("#loginForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = document.querySelector("#loginEmail").value.trim();
+    const password = document.querySelector("#loginPassword").value;
+    const loginMessage = document.querySelector("#loginMessage");
+
+    loginMessage.textContent = "Logging in…";
+
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password
+    });
+
+    if (error) {
+      loginMessage.textContent = error.message;
+      loginMessage.className = "message error";
+      return;
+    }
+
+    location.reload();
+  });
+}
 
 document.querySelector("#app").innerHTML = `
   <div class="page">
@@ -230,4 +284,10 @@ function renderDashboard(student, marks, attendance, fees) {
 document.querySelector("#searchForm").addEventListener("submit", e => {
   e.preventDefault();
   searchStudent(document.querySelector("#studentId").value);
+});
+
+checkLogin().then(user => {
+  if (!user) {
+    showLoginPage();
+  }
 });
