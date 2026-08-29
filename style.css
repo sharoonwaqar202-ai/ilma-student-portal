@@ -15,9 +15,14 @@ body { margin: 0; min-width: 320px; }
 }
 .brand { display:flex; align-items:center; gap:14px; }
 .logo {
-  width:52px;height:52px;border-radius:14px;background:white;color:#102a56;
-  display:grid;place-items:center;font-weight:900;font-size:20px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  object-fit:cover;
+  display:block;
+  background:white;
 }
+
 h1,h2,h3,p { margin:0; }
 .brand h1 { font-size:25px; letter-spacing:1px; }
 .brand p { opacity:.75; margin-top:2px; }
