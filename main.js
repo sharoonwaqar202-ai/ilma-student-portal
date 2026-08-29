@@ -72,7 +72,7 @@ document.querySelector("#app").innerHTML = `
   <div class="page">
     <header class="hero">
       <div class="brand">
-        <div class="logo">IL</div>
+<img src="/ilma-logo.png" alt="ILMA University Logo" class="logo">
         <div>
           <h1>ILMA</h1>
           <p>Student Portal</p>
