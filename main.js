@@ -169,7 +169,14 @@ function renderDashboard(student, marks, attendance, fees) {
   `;
 }
 
-async function searchStudent(studentId) {
+  async function searchStudent(studentId) {
+  const user = await checkLogin();
+
+  if (!user) {
+    setMessage("Please login first.", "error");
+    return;
+  }
+
   if (!supabase) {
     setMessage("Supabase is not configured yet. Add the Vercel environment variables first.", "error");
     return;
