@@ -17,7 +17,7 @@ function showLoginPage() {
   document.querySelector("#app").innerHTML = `
     <div class="login-page">
       <div class="login-card">
-        <div class="logo">IL</div>
+        <img src="/ilma-logo.png" alt="ILMA University Logo" class="logo">
         <h1>ILMA Student Portal</h1>
         <p>Login to access your student record</p>
 
