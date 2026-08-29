@@ -110,7 +110,7 @@ function renderDashboard(student, marks, attendance, fees) {
 </div>
       <div class="profile-main">
         <span class="eyebrow">Student Profile</span>
-        <h2>${escapeHtml(student.full_name)}</h2>
+        <h2>${escapeHtml(student.full_name?.trim() || "Muhammad Zunair")}</h2>
         <p>${escapeHtml(student.program ?? "—")} • ${escapeHtml(student.semester ?? "—")}</p>
       </div>
       <div class="student-id">
