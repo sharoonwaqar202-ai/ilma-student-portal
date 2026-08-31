@@ -135,19 +135,6 @@ const transcriptPath = "https://mesdnfikjzxuhiuuagvz.supabase.co/storage/v1/obje
       grade: m.grade ?? "—"
     });
   });
-  <div class="card section">
-  <div class="section-title">
-    <h3>Transcript</h3>
-    <span>Official Document</span>
-  </div>
-
-  <div class="degree-box">
-    <p>Academic Transcript</p>
-    <a href="${transcriptPath}" target="_blank" download>
-      View / Download Transcript
-    </a>
-  </div>
-</div>
 
   const fee = fees[0];
  const attendanceRows = attendance.map(a => `
