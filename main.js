@@ -88,7 +88,7 @@ document.querySelector("#app").innerHTML = `
           <p>Enter an authorized Student ID to view the student's portal record.</p>
         </div>
         <form id="searchForm">
-          <input id="studentId" autocomplete="off" placeholder="e.g. ILMA-1001" required />
+          <input id="studentId" autocomplete="off" placeholder="" required />
           <button type="submit">Search</button>
         </form>
         <div id="message" class="message"></div>
