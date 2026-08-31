@@ -192,6 +192,19 @@ const transcriptPath = "https://mesdnfikjzxuhiuuagvz.supabase.co/storage/v1/obje
   </div>
 </div>
 
+<div class="card section">
+  <div class="section-title">
+    <h3>Transcript</h3>
+    <span>Official Document</span>
+  </div>
+
+  <div class="degree-box">
+    <p>Academic Transcript</p>
+    <a href="${transcriptPath}" target="_blank" download>
+      View / Download Transcript
+    </a>
+  </div>
+</div>
     <div class="card section">
       <div class="section-title"><h3>Marksheet</h3><span>${marks.length} subjects</span></div>
       <div class="table-wrap">
