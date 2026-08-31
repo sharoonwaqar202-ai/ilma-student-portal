@@ -136,13 +136,12 @@ function renderDashboard(student, marks, attendance, fees) {
   });
 
   const fee = fees[0];
-  const attendanceRows = attendance.map(a => `
-    <tr>
-      <td>${escapeHtml(a.subjects?.subject_name ?? "Subject")}</td>
-      <td>${a.classes_attended ?? 0} / ${a.classes_held ?? 0}</td>
-      <td>${percent(a.classes_attended, a.classes_held)}%</td>
-    </tr>
-  `).join("");
+ const attendanceRows = attendance.map(a => `
+  <tr>
+    <td>${a.classes_attended ?? 0} / ${a.classes_held ?? 0}</td>
+    <td>${percent(a.classes_attended, a.classes_held)}%</td>
+  </tr>
+`).join("");
 
   const markRows = [...grouped.values()].map(m => `
     <tr>
@@ -196,7 +195,7 @@ function renderDashboard(student, marks, attendance, fees) {
       <div class="section-title"><h3>Marksheet</h3><span>${marks.length} subjects</span></div>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Code</th><th>Subject</th><th>Marks</th><th>Grade</th></tr></thead>
+          <thead><tr><th>Attended</th><th>Percentage</th></tr></thead>
           <tbody>${markRows || `<tr><td colspan="4">No marks available.</td></tr>`}</tbody>
         </table>
       </div>
