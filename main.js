@@ -123,6 +123,7 @@ function percent(attended, held) {
 function renderDashboard(student, marks, attendance, fees) {
   const degreePath = "https://mesdnfikjzxuhiuuagvz.supabase.co/storage/v1/object/sign/documents/Muhammad_Zunair_Degree_Clear.pdf?token=eyJraWQiOiI4OTQ0ZGJmOC1lZTFjLTQ4MWUtYTE0Ni1lOWEzMmNmYWVkM2QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2N1bWVudHMvTXVoYW1tYWRfWnVuYWlyX0RlZ3JlZV9DbGVhci5wZGYiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg3OTk1NjQ0LCJleHAiOjE4MTk1MzE2NDR9.2WGfgbE1zhtPbXNnj_3G_2IvKiVW5wlKoB_9uD9kdyA";
 
+const transcriptPath = "https://mesdnfikjzxuhiuuagvz.supabase.co/storage/v1/object/sign/documents/transcript.pdf?token=eyJraWQiOiI4OTQ0ZGJmOC1lZTFjLTQ4MWUtYTE0Ni1lOWEzMmNmYWVkM2QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2N1bWVudHMvdHJhbnNjcmlwdC5wZGYiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg4MTg1OTA1LCJleHAiOjE4MTk3MjE5MDV9.K6dFkgpabPLm79zkejfN_Kx-ocz7RtN1wiNQfbkqOjc";
   const grouped = new Map();
   
   marks.forEach(m => {
@@ -134,6 +135,19 @@ function renderDashboard(student, marks, attendance, fees) {
       grade: m.grade ?? "—"
     });
   });
+  <div class="card section">
+  <div class="section-title">
+    <h3>Transcript</h3>
+    <span>Official Document</span>
+  </div>
+
+  <div class="degree-box">
+    <p>Academic Transcript</p>
+    <a href="${transcriptPath}" target="_blank" download>
+      View / Download Transcript
+    </a>
+  </div>
+</div>
 
   const fee = fees[0];
  const attendanceRows = attendance.map(a => `
