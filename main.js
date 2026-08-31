@@ -205,8 +205,8 @@ function renderDashboard(student, marks, attendance, fees) {
       <div class="section-title"><h3>Attendance</h3><span>Class record</span></div>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Subject</th><th>Attended</th><th>Percentage</th></tr></thead>
-          <tbody>${attendanceRows || `<tr><td colspan="3">No attendance available.</td></tr>`}</tbody>
+          <thead><tr><th>Attended</th><th>Percentage</th></tr></thead>
+          <tbody>${attendanceRows || `<tr><td colspan="2">No attendance available.</td></tr>`}</tbody>
         </table>
       </div>
     </div>
