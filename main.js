@@ -123,7 +123,7 @@ function percent(attended, held) {
 function renderDashboard(student, marks, attendance, fees) {
   const degreePath = "https://mesdnfikjzxuhiuuagvz.supabase.co/storage/v1/object/sign/documents/Muhammad_Zunair_Degree_Clear.pdf?token=eyJraWQiOiI4OTQ0ZGJmOC1lZTFjLTQ4MWUtYTE0Ni1lOWEzMmNmYWVkM2QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2N1bWVudHMvTXVoYW1tYWRfWnVuYWlyX0RlZ3JlZV9DbGVhci5wZGYiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg3OTk1NjQ0LCJleHAiOjE4MTk1MzE2NDR9.2WGfgbE1zhtPbXNnj_3G_2IvKiVW5wlKoB_9uD9kdyA";
 
-const transcriptPath = "https://mesdnfikjzxuhiuuagvz.supabase.co/storage/v1/object/sign/documents/transcript.pdf?token=eyJraWQiOiI4OTQ0ZGJmOC1lZTFjLTQ4MWUtYTE0Ni1lOWEzMmNmYWVkM2QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2N1bWVudHMvdHJhbnNjcmlwdC5wZGYiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg4MTg1OTA1LCJleHAiOjE4MTk3MjE5MDV9.K6dFkgpabPLm79zkejfN_Kx-ocz7RtN1wiNQfbkqOjc";
+const transcriptPath = "https://mesdnfikjzxuhiuuagvz.supabase.co/storage/v1/object/sign/documents/transcript%20(2).pdf?token=eyJraWQiOiI4OTQ0ZGJmOC1lZTFjLTQ4MWUtYTE0Ni1lOWEzMmNmYWVkM2QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2N1bWVudHMvdHJhbnNjcmlwdCAoMikucGRmIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4ODI2NzUzMCwiZXhwIjoxODE5ODAzNTMwfQ.wZU75KbyhurJlyvu9dlg2bz9dguFs3i0WLGeAb8mdtc";
   const grouped = new Map();
   
   marks.forEach(m => {
